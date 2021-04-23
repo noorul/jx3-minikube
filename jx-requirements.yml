@@ -8,19 +8,20 @@ spec:
     chartRepository: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/
     clusterName: kind
     devEnvApprovers:
-    - todo
-    environmentGitOwner: todo
-    gitKind: github
-    gitName: github
-    gitServer: https://github.com
-    provider: minikube
+    - gvt
+    environmentGitOwner: gvt
+    gitKind: bitbucketserver
+    gitName: bs
+    gitServer: http://jxpoc.arubathena.com:7990
+    provider: kubernetes
   environments:
   - key: dev
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: jxpoc.arubathena.com
     externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
